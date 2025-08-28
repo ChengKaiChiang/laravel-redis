@@ -66,7 +66,7 @@ class KeysByScanForPhpRedisTest extends TestCase
     }
 
     #[Test]
-    public function basicScanCase(): void
+    public function testBasicScanCase(): void
     {
         $this->assertSame([
             'foo:1',
@@ -77,7 +77,7 @@ class KeysByScanForPhpRedisTest extends TestCase
     }
 
     #[Test]
-    public function basicScanCase2(): void
+    public function testBasicScanCase2(): void
     {
         $this->assertSame([
             'bar:5',
@@ -88,7 +88,7 @@ class KeysByScanForPhpRedisTest extends TestCase
     }
 
     #[Test]
-    public function basicScanCase3(): void
+    public function testBasicScanCase3(): void
     {
         $this->assertSame([
             'bar:foo:7',
