@@ -4,9 +4,9 @@
 
 ## Requirement
 
-* PHP 8.1 ~ 8.3
+* PHP 8.1 ~ 8.4
 * Laravel 10 ~ 12
-* ext-redis 5.3 ~ 6.0 (Test covered)
+* ext-redis 5.3 ~ 6.2 (Test covered)
 * Redis 6 ~ 7 (Test covered)
 * Predis ^2.0.3
 
