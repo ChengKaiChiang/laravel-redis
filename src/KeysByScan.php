@@ -83,7 +83,6 @@ class KeysByScan
         $client = $this->connection->client();
 
         if ($client instanceof PhpRedisClient) {
-            // 直接使用 rawCommand 避免 Laravel Redis 封裝的問題
             return $this->performRawScan($cursor, $options);
         }
 
