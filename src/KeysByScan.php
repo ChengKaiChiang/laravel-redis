@@ -82,13 +82,12 @@ class KeysByScan
     {
         $client = $this->connection->client();
 
-        $result = $this->connection->scan($cursor, $options);
-
-        if ($result === false || (is_array($result) && isset($result[1]) && empty($result[1]))) {
-            if ($client instanceof PhpRedisClient) {
-                return $this->performRawScan($cursor, $options);
-            }
+        if ($client instanceof PhpRedisClient) {
+            // 直接使用 rawCommand 避免 Laravel Redis 封裝的問題
+            return $this->performRawScan($cursor, $options);
         }
+
+        $result = $this->connection->scan($cursor, $options);
 
         return $result;
     }
